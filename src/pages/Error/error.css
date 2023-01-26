@@ -1,0 +1,30 @@
+.PageIntrouvable {
+    color: #FF6060;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 142.6%;
+    margin: 0px;
+    height: 50vh;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+    height: 15vh;
+}
+
+.PageIntrouvable a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    text-decoration-line: underline;
+    height: 15vh;
+}

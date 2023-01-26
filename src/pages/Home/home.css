@@ -1,0 +1,10 @@
+.Home {
+    margin: auto;
+}
+
+.Body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('@/images/header.svg');
+}
