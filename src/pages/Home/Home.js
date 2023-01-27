@@ -1,6 +1,13 @@
 import React from "react";
-import CarteLogement from "./CarteLogement";
 import "./home.css";
+import getApi from "@/components/api/getApi";
+import { Link } from "react-router-dom";
+
+let logements = getApi();
+
+let testApi = () => {
+    console.log(logements);
+};
 
 const Home = () => {
     return (
@@ -10,7 +17,9 @@ const Home = () => {
             </div>
             <div>
                 <section className="Body__CarteLogement">
-                    <CarteLogement />
+                    <Link onClick={testApi}>Test de l'api</Link>
+                    <Link to="/logement/1">logement/1</Link>
+                    <Link to="/logement">logement error</Link>
                 </section>
             </div>
         </>

@@ -6,5 +6,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('@/images/header.svg');
+    height: 20vh;
+
+}
+
+.Body__CarteLogement {
+    display: flex;
+    gap: 5vh;
+    height: 80vh;
 }
