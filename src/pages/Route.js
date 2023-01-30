@@ -1,7 +1,7 @@
 import React from "react";
 import Error from "@/pages/Error/PageIntrouvable";
-
-import { Home, APropos, Layout, Logement } from "@/pages";
+import Layout from "@/components/Layout";
+import { Home, APropos, Logement } from "@/pages";
 import { Routes, Route } from "react-router-dom";
 
 const Router = () => {

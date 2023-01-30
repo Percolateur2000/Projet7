@@ -1,23 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "@/components/header/header.css";
-import Logo from "@/components/logo/Logo";
+import Logo from "@/components/Logo";
 
 const Header = () => {
     return (
-        <header className="header">
+        <nav className="header">
             <Logo />
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Accueil</Link>
-                    </li>
-                    <li>
-                        <Link to="/APropos">A Propos</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+            <ul>
+                <li>
+                    <Link to="/">Accueil</Link>
+                </li>
+                <li>
+                    <Link to="/APropos">A Propos</Link>
+                </li>
+            </ul>
+        </nav>
     );
 };
 

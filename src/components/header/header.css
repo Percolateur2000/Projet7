@@ -4,21 +4,25 @@
     max-width: 1240px;
     height: 68px;
     flex-direction: row;
-    margin: auto;
+    margin: 30px auto 30px auto;
     align-items: center;
 }
 
-ul {
+.header ul {
     list-style: none;
     padding: 0px;
 }
 
-ul li {
+.header ul li {
     display: inline-block;
     padding-right: 15px;
 }
 
-a {
+.header a {
     text-decoration: none;
     color: #FF6060;
+}
+
+.header a:hover {
+    text-decoration: underline;
 }
