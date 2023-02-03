@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 const FicheLogement = () => {
     let { id } = useParams();
-    return <div>{id}</div>;
+    return <div className="logement">{id}</div>;
 };
 
 export default FicheLogement;

@@ -16,10 +16,9 @@ const Home = () => {
             <section className="Body__CarteLogement">
                 <ul>
                     {logements.map((logement) => (
-                        <Link to={`/logement/${logement.id}`}>
+                        <Link key={logement.id} to={`/logement/${logement.id}`}>
                             <li
                                 className="carte"
-                                key={logement.id}
                                 style={{
                                     backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), 
                                     url(${logement.cover})`,
