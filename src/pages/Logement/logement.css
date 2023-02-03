@@ -2,3 +2,32 @@
     padding: 0 20px 0 20px;
     margin: auto;
 }
+
+.logement__global {
+    width: 48%;
+}
+
+.logement__menus {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.logement__menus__titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
+    background: #FF6060;
+    padding: 7px 21px 7px 21px;
+}
+
+.logement__menus__desc {
+    background-color: rgba(246, 246, 246, 1);
+    color: rgba(255, 96, 96, 1);
+    padding: 30px 10px 10px 10px;
+    font-weight: 400;
+    font-size: 24px;
+    margin: auto;
+}

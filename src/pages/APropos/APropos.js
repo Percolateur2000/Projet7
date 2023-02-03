@@ -1,7 +1,11 @@
-import React, { useState } from "react";
-import "@/pages/APropos/apropos.css";
-import apropos from "@/images/apropos.png";
-import arrow from "@/images/arrow.png";
+import React from "react";
+import "../../pages/APropos/apropos.css";
+import apropos from "../../images/apropos.png";
+import MenuDeroulant from "../../components/MenuDeroulant";
+
+let menu = `apropos__menu`;
+let header = `apropos__header`;
+let paragraphe = `apropos__text`;
 
 let titre1 = `Fiabilité`;
 let detail1 = `Les annonces postées sur Kasa garantissent une fiabilité totale. Les
@@ -26,34 +30,6 @@ l'hôte qu'au locataire, cela permet à nos équipes de vérifier que
 les standards sont bien respectés. Nous organisons également des
 ateliers sur la sécurité domestique pour nos hôtes.`;
 
-const Detail = ({ titre, texte }) => {
-    const [state, setState] = useState(false);
-
-    const handleClick = () => {
-        setState(!state);
-    };
-    if (state === true) {
-        return (
-            <section>
-                <div className="apropos__header" onClick={handleClick}>
-                    <p>{titre}</p>
-                    <img src={`${arrow}`} alt="arrow" />
-                </div>
-                <p className="apropos__text">{texte}</p>
-            </section>
-        );
-    } else {
-        return (
-            <section>
-                <div className="apropos__header" onClick={handleClick}>
-                    <p>{titre}</p>
-                    <img src={`${arrow}`} alt="arrow" />
-                </div>
-            </section>
-        );
-    }
-};
-
 const APropos = () => {
     return (
         <div className="apropos">
@@ -62,10 +38,34 @@ const APropos = () => {
                 src={`${apropos}`}
                 alt="illustration"
             />
-            <Detail titre={`${titre1}`} texte={`${detail1}`} />
-            <Detail titre={`${titre2}`} texte={`${detail2}`} />
-            <Detail titre={`${titre3}`} texte={`${detail3}`} />
-            <Detail titre={`${titre4}`} texte={`${detail4}`} />
+            <MenuDeroulant
+                menu={`${menu}`}
+                titre={`${titre1}`}
+                texte={`${detail1}`}
+                header={`${header}`}
+                paragraphe={`${paragraphe}`}
+            />
+            <MenuDeroulant
+                menu={`${menu}`}
+                titre={`${titre2}`}
+                texte={`${detail2}`}
+                header={`${header}`}
+                paragraphe={`${paragraphe}`}
+            />
+            <MenuDeroulant
+                menu={`${menu}`}
+                titre={`${titre3}`}
+                texte={`${detail3}`}
+                header={`${header}`}
+                paragraphe={`${paragraphe}`}
+            />
+            <MenuDeroulant
+                menu={`${menu}`}
+                titre={`${titre4}`}
+                texte={`${detail4}`}
+                header={`${header}`}
+                paragraphe={`${paragraphe}`}
+            />
         </div>
     );
 };
