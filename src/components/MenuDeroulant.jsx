@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import arrow from "@/images/arrow.png";
+import Arrow from "./Arrow";
 
 const MenuDeroulant = ({ menu, header, paragraphe, titre, texte }) => {
     const [state, setState] = useState(false);
 
     const arrowStyle = {
-        transform: state ? "rotate(-180deg)" : "rotate(0deg)",
+        height: "50px",
+        width: "50px",
+        transform: state ? "rotate(90deg)" : "rotate(-90deg)",
         transition: "transform 100ms ease-in-out",
     };
 
@@ -17,18 +19,18 @@ const MenuDeroulant = ({ menu, header, paragraphe, titre, texte }) => {
         return (
             <div className={`${menu}`}>
                 <div className={`${header}`} onClick={handleClick}>
-                    <p>{titre}</p>
-                    <img src={`${arrow}`} alt="arrow" style={arrowStyle} />
+                    <h4>{titre}</h4>
+                    <Arrow style={arrowStyle} />
                 </div>
-                <p className={`${paragraphe}`}>{texte}</p>
+                <h6 className={`${paragraphe}`}>{texte}</h6>
             </div>
         );
     } else {
         return (
             <div className={`${menu}`}>
                 <div className={`${header}`} onClick={handleClick}>
-                    <p>{titre}</p>
-                    <img src={`${arrow}`} alt="arrow" style={arrowStyle} />
+                    <h4>{titre}</h4>
+                    <Arrow style={arrowStyle} />
                 </div>
             </div>
         );

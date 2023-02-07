@@ -1,16 +1,91 @@
 .logement {
     padding: 0 20px 0 20px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1240px;
+
 }
 
-.logement__global {
+.logement__global,
+.logement__tags,
+.logement__rattings {
     width: 48%;
+}
+
+.logement__header,
+.logement__menus,
+.logement__misc,
+.logement__presentation,
+.img__loader {
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+
+.logement__img {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.img__loader {
+    height: 415px;
+    width: 1240px;
+}
+
+.logement__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logement__header h2 {
+    font-size: 36px;
+    color: #FF6060;
+    font-weight: 500;
+    margin: auto;
+}
+
+.logement__header h4 {
+    font-size: 18px;
+    color: #FF6060;
+    font-weight: 500;
+    margin: auto;
+}
+
+.logement__host {
+    font-size: 18px;
+    color: #FF6060;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logement__host h5 {
+    margin-right: 15px;
+    width: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.logement__host img {
+    background: #C4C4C4;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
 }
 
 .logement__menus {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
 }
 
 .logement__menus__titre {
@@ -20,14 +95,52 @@
     border-radius: 5px;
     color: rgba(255, 255, 255, 1);
     background: #FF6060;
-    padding: 7px 21px 7px 21px;
+    padding: 0 15px 0 21px;
+}
+
+.logement__menus__titre h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
 }
 
 .logement__menus__desc {
     background-color: rgba(246, 246, 246, 1);
     color: rgba(255, 96, 96, 1);
-    padding: 30px 10px 10px 10px;
+    padding: 30px 10px 30px 21px;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 18px;
     margin: auto;
+    line-height: 142.6%;
+}
+
+.logement__menus__desc p {
+    margin: auto;
+}
+
+.logement__misc {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logement__tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logement__tags p {
+    width: fit-content;
+    margin: 0 15px 15px 0;
+    padding: 3px 40px 3px 40px;
+    background: #FF6060;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.logement__rattings {
+    padding-right: 20px;
 }
