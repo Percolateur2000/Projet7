@@ -2,8 +2,8 @@ import { React, useEffect } from "react";
 import MenuDeroulant from "../../components/MenuDeroulant";
 import getApi from "../../components/api/getApi";
 import { useParams } from "react-router-dom";
-import Arrow from "../../components/Arrow";
 import Star from "../../components/Star";
+import Carousel from "../../components/Carousel";
 
 let logements = getApi();
 
@@ -11,25 +11,6 @@ let n = 0;
 let menu = `logement__global`;
 let header = `logement__menus__titre`;
 let paragraphe = `logement__menus__desc`;
-
-const arrowprev = {
-    height: "130px",
-    width: "130px",
-    position: "absolute",
-    left: "70",
-    zindex: "2",
-    transform: "rotateZ(180deg)",
-    top: "280",
-};
-
-const arrownext = {
-    height: "130px",
-    width: "130px",
-    position: "absolute",
-    zindex: "2",
-    right: "70",
-    top: "280",
-};
 
 const FicheLogement = () => {
     function useLogement() {
@@ -58,8 +39,6 @@ const FicheLogement = () => {
     const equipments = logements[n].equipments;
     const location = logements[n].location;
 
-    let img = 0;
-
     let star = 0;
     function isStar(color) {
         while (star < rating) {
@@ -78,39 +57,10 @@ const FicheLogement = () => {
         );
     }
 
-    const clickRetour = () => {
-        console.log(img);
-        if (img <= 0) {
-            img = photos.length;
-        } else {
-            img = img - 1;
-        }
-    };
-
-    const clickSuivant = () => {
-        console.log(img);
-
-        if (img === photos.length) {
-            img = 0;
-        } else {
-            img = img + 1;
-        }
-    };
-
     return (
         <section className="logement">
             <div className="img__loader">
-                <div onClick={clickRetour}>
-                    <Arrow style={arrowprev} />
-                </div>
-                <img
-                    className="logement__img"
-                    src={`${photos[0]}`}
-                    alt="Photos d'interieur"
-                />
-                <div onClick={clickSuivant}>
-                    <Arrow style={arrownext} />
-                </div>
+                <Carousel slides={photos} />
             </div>
             <div className="logement__presentation">
                 <div className="logement__header">
