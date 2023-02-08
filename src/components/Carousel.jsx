@@ -16,20 +16,18 @@ const sliderStyles = {
     height: "100%",
 };
 
-const dotsContainerStyles = {
-    display: "flex",
-    justifyContent: "center",
+const slideNumber = {
+    position: "absolute",
+    color: "white",
+    bottom: "10px",
+    margin: "auto",
+    width: "100%",
+    textAlign: "center",
 };
 
 const Carousel = ({ slides }) => {
-    const dotStyle = {
-        margin: "0 3px",
-        cursor: "pointer",
-        fontSize: "20px",
-    };
-
     const arrowprev = {
-        left: "30px",
+        left: "10px",
         zindex: "2",
         transform: "rotateZ(180deg)",
         top: "150px",
@@ -42,7 +40,7 @@ const Carousel = ({ slides }) => {
     const arrownext = {
         opacity: slides.length <= 1 ? "0" : "1",
         zindex: "2",
-        right: "30px",
+        right: "10px",
         top: "150px",
         height: "130px",
         width: "130px",
@@ -60,9 +58,7 @@ const Carousel = ({ slides }) => {
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
-    const goToSlide = (slideIndex) => {
-        setCurrentIndex(slideIndex);
-    };
+
     const slideStylesWidthBackground = {
         ...slideStyles,
         backgroundImage: `url(${slides[currentIndex]})`,
@@ -78,18 +74,10 @@ const Carousel = ({ slides }) => {
                     <Arrow style={arrownext} />
                 </div>
             </div>
-            <div style={slideStylesWidthBackground}></div>
-            <div style={dotsContainerStyles}>
-                {slides.map((slide, slideIndex) => (
-                    <div
-                        style={dotStyle}
-                        key={slideIndex}
-                        onClick={() => goToSlide(slideIndex)}
-                    >
-                        ●
-                    </div>
-                ))}
+            <div style={slideNumber}>
+                {currentIndex + 1} / {slides.length}
             </div>
+            <div style={slideStylesWidthBackground}></div>
         </div>
     );
 };
