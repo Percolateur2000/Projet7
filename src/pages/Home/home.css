@@ -19,6 +19,10 @@
     ;
 }
 
+.small {
+    opacity: 0;
+}
+
 .Body__header h1 {
     font-weight: 500;
     font-size: 48px;
@@ -74,4 +78,34 @@
     color: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-color: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 
+}
+
+@media (max-width : 400px) {
+    .Body__header {
+        height: auto;
+        margin-top: 0;
+    }
+
+    .Body__header h1 {
+        font-size: larger;
+    }
+
+    .large {
+        opacity: 0;
+    }
+
+    .small {
+        opacity: 1;
+        width: 70%;
+    }
+
+    .Body__CarteLogement {
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .Body__CarteLogement ul {
+        padding: 0px;
+        gap: 20px;
+    }
 }

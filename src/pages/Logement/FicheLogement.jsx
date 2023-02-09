@@ -68,19 +68,21 @@ const FicheLogement = () => {
                         <h2>{title}</h2>
                         <h4>{location}</h4>
                     </div>
-                    <div className="logement__host">
-                        <h5>{name}</h5>
-                        <img src={picture} alt={`Portrait de ${name}`} />
-                    </div>
-                </div>
-                <div className="logement__misc">
                     <div className="logement__tags">{itemList(tags)}</div>
-                    <div className="logement__ratings">
-                        <Star color={isStar()} />
-                        <Star color={isStar()} />
-                        <Star color={isStar()} />
-                        <Star color={isStar()} />
-                        <Star color={isStar()} />
+                </div>
+                <div className="logement__part">
+                    <div className="logement__misc">
+                        <div className="logement__host">
+                            <h5>{name}</h5>
+                            <img src={picture} alt={`Portrait de ${name}`} />
+                        </div>
+                        <div className="logement__ratings">
+                            <Star color={isStar()} />
+                            <Star color={isStar()} />
+                            <Star color={isStar()} />
+                            <Star color={isStar()} />
+                            <Star color={isStar()} />
+                        </div>
                     </div>
                 </div>
                 <div className="logement__menus">

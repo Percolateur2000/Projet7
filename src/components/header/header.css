@@ -4,10 +4,12 @@
     max-width: 1240px;
     height: 68px;
     flex-direction: row;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 0;
     align-items: center;
-    padding: 0 20px 0 20px;
+}
 
+.header svg {
+    width: 210px;
 }
 
 .header ul {
@@ -17,7 +19,7 @@
 
 .header ul li {
     display: inline-block;
-    padding-right: 15px;
+    padding-right: 20px;
 }
 
 .header a {
@@ -27,4 +29,16 @@
 
 .header a:hover {
     text-decoration: underline;
+}
+
+@media (max-width : 400px) {
+    .header {
+        margin: 0;
+
+    }
+
+    .header svg {
+        width: 145px;
+        padding-left: 20px;
+    }
 }

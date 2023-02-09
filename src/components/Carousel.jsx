@@ -4,7 +4,7 @@ import Arrow from "../components/Arrow";
 // il s'agit de la version trouvée ici : https://github.com/monsterlessonsacademy/monsterlessonsacademy/blob/221-react-image-slider/src/ImageSlider.js
 
 const slideStyles = {
-    width: "1240px",
+    maxWidth: "100%",
     height: "415px",
     borderRadius: "10px",
     backgroundSize: "cover",
@@ -13,21 +13,21 @@ const slideStyles = {
 
 const sliderStyles = {
     position: "relative",
-    height: "100%",
-};
-
-const slideNumber = {
-    position: "absolute",
-    color: "white",
-    bottom: "10px",
-    margin: "auto",
-    width: "100%",
-    textAlign: "center",
 };
 
 const Carousel = ({ slides }) => {
+    const slideNumber = {
+        position: "absolute",
+        color: "white",
+        bottom: "10px",
+        margin: "auto",
+        width: "100%",
+        textAlign: "center",
+        opacity: slides.length <= 1 ? "0" : "1",
+    };
+
     const arrowprev = {
-        left: "10px",
+        left: "0px",
         zindex: "2",
         transform: "rotateZ(180deg)",
         top: "150px",
@@ -40,7 +40,7 @@ const Carousel = ({ slides }) => {
     const arrownext = {
         opacity: slides.length <= 1 ? "0" : "1",
         zindex: "2",
-        right: "10px",
+        right: "0px",
         top: "150px",
         height: "130px",
         width: "130px",
@@ -77,7 +77,10 @@ const Carousel = ({ slides }) => {
             <div style={slideNumber}>
                 {currentIndex + 1} / {slides.length}
             </div>
-            <div style={slideStylesWidthBackground}></div>
+            <div
+                className="img__height"
+                style={slideStylesWidthBackground}
+            ></div>
         </div>
     );
 };

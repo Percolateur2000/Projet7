@@ -1,8 +1,9 @@
-const Star = ({ color = "#E3E3E3" }) => {
+const Star = ({ color = "#E3E3E3", size = "30px" }) => {
     return (
         <svg
-            width="30"
-            height="30"
+            className="star"
+            width={size}
+            height={size}
             viewBox="0 0 30 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

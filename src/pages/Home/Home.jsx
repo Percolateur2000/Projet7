@@ -11,7 +11,11 @@ const Home = () => {
         <>
             <div className="Body__header">
                 <img src={`${header}`} alt="header" />
-                <h1>Chez vous, partout et ailleurs</h1>
+                <h1 className="large">Chez vous, partout et ailleurs</h1>
+                <h1 className="small">
+                    Chez vous, <br />
+                    partout et ailleurs
+                </h1>
             </div>
             <section className="Body__CarteLogement">
                 <ul>
