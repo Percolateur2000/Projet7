@@ -1,4 +1,4 @@
-import logements from "@/components/api/logements.json";
+import logements from "./logements.json";
 
 const getApi = () => {
     return logements;

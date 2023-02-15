@@ -48,6 +48,7 @@
 
 .apropos__text {
     background-color: rgba(246, 246, 246, 1);
+    border-radius: 5px;
     color: rgba(255, 96, 96, 1);
     margin: auto;
     padding: 30px 10px 10px 10px;

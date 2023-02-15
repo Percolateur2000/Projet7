@@ -12,6 +12,7 @@ let menu = `logement__global`;
 let header = `logement__menus__titre`;
 let paragraphe = `logement__menus__desc`;
 
+//recherche de l'index dans l'array de l'api
 const FicheLogement = () => {
     function useLogement() {
         let { id } = useParams();
@@ -23,6 +24,7 @@ const FicheLogement = () => {
             }
     }
 
+    // retour en haut de page lors du chargement
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -39,6 +41,7 @@ const FicheLogement = () => {
     const equipments = logements[n].equipments;
     const location = logements[n].location;
 
+    // coloration de l'etoile en fonction de la valeur de rating
     let star = 0;
     function isStar(color) {
         while (star < rating) {
@@ -47,6 +50,7 @@ const FicheLogement = () => {
         }
     }
 
+    //affichage en liste de la sous-array de l'api
     function itemList(type) {
         return (
             <>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Arrow from "../components/Arrow";
 
-// il s'agit de la version trouvée ici : https://github.com/monsterlessonsacademy/monsterlessonsacademy/blob/221-react-image-slider/src/ImageSlider.js
+// source used : https://github.com/monsterlessonsacademy/monsterlessonsacademy/blob/221-react-image-slider/src/ImageSlider.js
 
 const slideStyles = {
     maxWidth: "100%",
@@ -16,6 +16,8 @@ const sliderStyles = {
 };
 
 const Carousel = ({ slides }) => {
+    // utilisation de const dans la fonction car ternaires
+
     const slideNumber = {
         position: "absolute",
         color: "white",

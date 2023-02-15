@@ -15,26 +15,15 @@ const MenuDeroulant = ({ menu, header, paragraphe, titre, texte }) => {
         setState(!state);
     };
 
-    if (state === true) {
-        return (
-            <div className={`${menu}`}>
-                <div className={`${header}`} onClick={handleClick}>
-                    <h4>{titre}</h4>
-                    <Arrow style={arrowStyle} />
-                </div>
-                <h6 className={`${paragraphe}`}>{texte}</h6>
+    return (
+        <div className={`${menu}`}>
+            <div className={`${header}`} onClick={handleClick}>
+                <h4>{titre}</h4>
+                <Arrow style={arrowStyle} />
             </div>
-        );
-    } else {
-        return (
-            <div className={`${menu}`}>
-                <div className={`${header}`} onClick={handleClick}>
-                    <h4>{titre}</h4>
-                    <Arrow style={arrowStyle} />
-                </div>
-            </div>
-        );
-    }
+            {state ? <h6 className={`${paragraphe}`}>{texte}</h6> : ""}
+        </div>
+    );
 };
 
 export default MenuDeroulant;

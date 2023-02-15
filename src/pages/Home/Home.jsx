@@ -1,8 +1,8 @@
 import React from "react";
 import "./home.css";
-import getApi from "@/components/api/getApi";
+import getApi from "../../components/api/getApi";
 import { Link } from "react-router-dom";
-import header from "@/images/header.png";
+import header from "../../images/header.png";
 
 let logements = getApi();
 
